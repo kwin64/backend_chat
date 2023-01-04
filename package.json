@@ -1,0 +1,19 @@
+{
+  "name": "backend_chat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:kwin64/backend_chat.git",
+  "author": "kwin64 <kwin11bvb@yandex.by>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "socket.io": "^4.5.4"
+  }
+}
