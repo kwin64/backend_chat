@@ -5,6 +5,7 @@ import { Server } from 'socket.io'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import multer from 'multer'
+import authRoute from './routes/auth.js'
 dotenv.config()
 
 mongoose.set('strictQuery', false)
@@ -32,6 +33,7 @@ const upload = multer({ storage })
 app.use('/uploads', express.static('uploads'))
 
 //routes
+app.use('/auth', authRoute)
 app.post('/uploads', upload.single('image'), (req, res) => {
 	res.json({
 		url: `uploads/${req.file.originalname}`
